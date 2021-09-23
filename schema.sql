@@ -13,13 +13,13 @@ CREATE TABLE region (
 CREATE TABLE weather (
   index INT,
   region_id INT NOT NULL,
-  Lat INT NOT NULL,
-  Lng INT NOT NULL,
-  max_temp INT NOT NULL,
-  min_temp INT NOT NULL,
-  Temp INT NOT NULL,
-  Humidity INT NOT NULL,
-  diurnal_range INT NOT NULL,
+  Lat decimal (10, 2) NOT NULL,
+  Lng decimal (10, 2) NOT NULL,
+  max_temp decimal (10, 2) NOT NULL,
+  min_temp decimal (10, 2) NOT NULL,
+  Temp decimal (10, 2) NOT NULL,
+  Humidity decimal (10, 2) NOT NULL,
+  diurnal_range decimal (10, 2) NOT NULL,
   FOREIGN KEY (region_id) REFERENCES region (region_id)  
 );
 
@@ -29,6 +29,6 @@ CREATE TABLE wine (
   region_id INT NOT NULL,
   variety TEXT,
   points INT NOT NULL,
-  price INT NOT NULL,
+  price decimal (10, 2) NOT NULL,
   FOREIGN KEY (region_id) REFERENCES region (region_id)
 );
