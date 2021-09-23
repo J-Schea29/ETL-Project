@@ -2,6 +2,7 @@
 
 ---Table for Region Data
 CREATE TABLE region (
+  index INT,
   region_id INT PRIMARY KEY,
   country TEXT,
   province TEXT,
@@ -10,6 +11,7 @@ CREATE TABLE region (
 
 ---Table for Weather Data
 CREATE TABLE weather (
+  index INT,
   region_id INT NOT NULL,
   Lat INT NOT NULL,
   Lng INT NOT NULL,
@@ -23,6 +25,7 @@ CREATE TABLE weather (
 
 ---Table for Wine Data
 CREATE TABLE wine (
+  index INT,
   region_id INT NOT NULL,
   variety TEXT,
   points INT NOT NULL,
